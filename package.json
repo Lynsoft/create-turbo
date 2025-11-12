@@ -1,0 +1,85 @@
+{
+  "name": "@aiherrera/create-turbo",
+  "version": "1.0.1",
+  "description": "CLI to scaffold production-ready Turborepo monorepos with TypeScript, React, Tailwind CSS, Biome, Lefthook, Docker (PostgreSQL + Redis), and automated CI/CD",
+  "type": "module",
+  "bin": {
+    "create-turbo": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "pnpm build",
+    "pretest": "pnpm build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "keywords": [
+    "turborepo",
+    "template",
+    "monorepo",
+    "typescript",
+    "react",
+    "pnpm",
+    "biome",
+    "tailwindcss",
+    "lefthook",
+    "docker",
+    "postgresql",
+    "redis",
+    "ci-cd",
+    "scaffold",
+    "cli",
+    "create",
+    "generator",
+    "boilerplate",
+    "starter",
+    "semantic-release",
+    "github-actions"
+  ],
+  "author": {
+    "name": "Alain Iglesias",
+    "email": "alain@lynsoft.com",
+    "url": "https://github.com/aiherrera"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lynsoft/create-turbo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lynsoft/create-turbo/issues"
+  },
+  "homepage": "https://github.com/Lynsoft/create-turbo#readme",
+  "dependencies": {
+    "commander": "12.1.0",
+    "picocolors": "1.1.1",
+    "prompts": "2.4.2",
+    "validate-npm-package-name": "6.0.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@types/node": "22.10.5",
+    "@types/prompts": "2.4.9",
+    "@types/validate-npm-package-name": "4.0.2",
+    "@vitest/ui": "4.0.8",
+    "conventional-changelog-conventionalcommits": "9.1.0",
+    "semantic-release": "25.0.2",
+    "tsup": "8.5.0",
+    "typescript": "5.9.3",
+    "vitest": "4.0.8"
+  },
+  "engines": {
+    "node": ">=24.1.0",
+    "pnpm": ">=10.20.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "preferGlobal": false
+}
