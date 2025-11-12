@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/Lynsoft/create-turbo/compare/v1.0.2...v1.0.3) (2025-11-12)
+
+### Bug Fixes
+
+* use correct bin path without leading slash for npm compatibility ([b59aab8](https://github.com/Lynsoft/create-turbo/commit/b59aab8b86495a2601bcd270f572edb51ea9e752))
+
 ## [1.0.2](https://github.com/Lynsoft/create-turbo/compare/v1.0.1...v1.0.2) (2025-11-12)
 
 ### Bug Fixes
