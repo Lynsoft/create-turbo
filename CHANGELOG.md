@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/Lynsoft/create-turbo/compare/v1.0.0...v1.0.1) (2025-11-12)
+
+### Bug Fixes
+
+* trigger new release after npm sync issue ([561371b](https://github.com/Lynsoft/create-turbo/commit/561371b90598054ecc07699cb129ebf65b04cbbb))
+
 ## 1.0.0 (2025-11-12)
 
 ### Bug Fixes
