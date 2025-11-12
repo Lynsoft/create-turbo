@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/Lynsoft/create-turbo/compare/v1.0.1...v1.0.2) (2025-11-12)
+
+### Bug Fixes
+
+* correct bin field configuration for npm package ([9d52f52](https://github.com/Lynsoft/create-turbo/commit/9d52f529968a91bbf4e5a0ad68d6363d6a59e1a4))
+
 ## [1.0.1](https://github.com/Lynsoft/create-turbo/compare/v1.0.0...v1.0.1) (2025-11-12)
 
 ### Bug Fixes
