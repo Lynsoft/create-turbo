@@ -64,7 +64,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/node": "22.10.5",
+    "@types/node": "24.10.1",
     "@types/prompts": "2.4.9",
     "@types/validate-npm-package-name": "4.0.2",
     "@vitest/ui": "4.0.8",

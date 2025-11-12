@@ -181,7 +181,15 @@ export async function createProject(
     console.log(`  ${pc.bold(`${packageManager} dev`)} - Start development\n`);
   } catch (error) {
     console.error(pc.red("\n✖ Error creating project:\n"));
-    console.error(error);
+    if (error instanceof Error) {
+      console.error(pc.red(error.message));
+      if (error.stack) {
+        console.error(pc.dim("\nStack trace:"));
+        console.error(pc.dim(error.stack));
+      }
+    } else {
+      console.error(error);
+    }
     process.exit(1);
   }
 }
