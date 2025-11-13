@@ -65,13 +65,14 @@ pnpm create @aiherrera/turbo [project-name] [options]
 - `-p, --package-manager <manager>` - Package manager to use (pnpm, npm, yarn, bun)
 - `--skip-install` - Skip installing dependencies
 - `--skip-git` - Skip git initialization
+- `--with-addons <addons>` - Comma-separated list of add-ons to include (e.g., expo)
 - `-h, --help` - Display help
 - `-V, --version` - Display version
 
 ## Examples
 
 ```bash
-# Interactive mode (prompts for project name and package manager)
+# Interactive mode (prompts for project name, package manager, and add-ons)
 pnpm create @aiherrera/turbo
 
 # With project name
@@ -80,6 +81,9 @@ pnpm create @aiherrera/turbo my-awesome-app
 # With specific package manager
 pnpm create @aiherrera/turbo my-app -p npm
 
+# With add-ons (Expo mobile app)
+pnpm create @aiherrera/turbo my-app --with-addons expo
+
 # Skip dependency installation (useful for CI/CD)
 pnpm create @aiherrera/turbo my-app --skip-install
 
@@ -87,7 +91,7 @@ pnpm create @aiherrera/turbo my-app --skip-install
 pnpm create @aiherrera/turbo my-app --skip-git
 
 # Combine options
-pnpm create @aiherrera/turbo my-app -p yarn --skip-git
+pnpm create @aiherrera/turbo my-app -p yarn --with-addons expo --skip-git
 ```
 
 ## What You Get
@@ -120,6 +124,38 @@ This CLI scaffolds a production-ready Turborepo monorepo with:
 ### 🤖 CI/CD
 - **GitHub Actions** - Pre-configured workflows
 - **Automated releases** - On every push to main
+
+## Add-ons
+
+Enhance your monorepo with optional add-ons during setup or by using the `--with-addons` flag:
+
+### Available Add-ons
+
+#### 📱 Expo App (`expo`)
+- **Repository**: [Lynsoft/turborepo-template-apps-expo](https://github.com/Lynsoft/turborepo-template-apps-expo)
+- **Location**: `apps/mobile-expo`
+- **Description**: React Native mobile app with Expo, fully integrated with your monorepo
+- **Features**:
+  - Pre-configured Expo app with Sentry, NativeWind, and file-based routing
+  - Shared UI components from `@repo/ui`
+  - TypeScript support
+  - Ready for iOS and Android development
+- **Automatic Configuration**: The CLI automatically updates:
+  - `turbo.json`: Adds Expo-specific build outputs (`android/app/build/**`, `ios/build/**`, `.expo/**`)
+  - `biome.json`: Adds Expo directory exclusions (`!.expo`, `!android`, `!ios`)
+
+### Using Add-ons
+
+```bash
+# Interactive selection (prompts during setup)
+pnpm create @aiherrera/turbo my-app
+
+# Via CLI flag
+pnpm create @aiherrera/turbo my-app --with-addons expo
+
+# Multiple add-ons (when more become available)
+pnpm create @aiherrera/turbo my-app --with-addons expo,other
+```
 
 ## Template Repository
 
