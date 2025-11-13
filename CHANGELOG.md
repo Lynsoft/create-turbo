@@ -1,3 +1,13 @@
+## [1.1.0](https://github.com/Lynsoft/create-turbo/compare/v1.0.2...v1.1.0) (2025-11-13)
+
+### Features
+
+* added expo addon to the monorepo ([d121722](https://github.com/Lynsoft/create-turbo/commit/d121722d4fceb1a70d4cc2fe20a1b843e5669e5d))
+
+### Bug Fixes
+
+* use correct bin path without leading slash for npm compatibility ([b59aab8](https://github.com/Lynsoft/create-turbo/commit/b59aab8b86495a2601bcd270f572edb51ea9e752))
+
 ## [1.0.2](https://github.com/Lynsoft/create-turbo/compare/v1.0.1...v1.0.2) (2025-11-12)
 
 ### Bug Fixes
